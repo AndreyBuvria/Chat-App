@@ -1,0 +1,23 @@
+.msg {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  &__body {
+    max-width: 80%;
+    background: #fff;
+    border-radius: 25px;
+    padding: 12px 8px;
+  }
+
+  &__text {
+    word-break: break-all;
+    margin-top: 6px;
+    font-size: 14px;
+  }
+
+  &__date {
+    align-self: flex-end;
+    font-size: 12px;
+    color: #444343;
+  }
+}

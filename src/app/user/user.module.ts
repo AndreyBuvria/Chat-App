@@ -7,6 +7,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
 import { MessageComponent } from './chat-page/message/chat-message.component';
 import { ToolbarComponent } from './chat-page/toolbar/chat-bar.component';
+import { SendComponent } from './chat-page/send/send.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ToolbarComponent } from './chat-page/toolbar/chat-bar.component';
     ChatPageComponent,
     MessageComponent,
     ToolbarComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    SendComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,7 @@ import { ToolbarComponent } from './chat-page/toolbar/chat-bar.component';
         component: MainLayoutComponent,
         children: [
           {
-            path: 'chat',
+            path: 'chat/:room',
             component: ChatPageComponent
           },
           {

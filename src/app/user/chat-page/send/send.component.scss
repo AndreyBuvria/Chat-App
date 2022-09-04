@@ -1,18 +1,14 @@
 $input-color: #575b64;
 $input-border: #CDD9ED;
-$input-background: #fff;
 $input-placeholder: #CBD1DC;
 $input-border-focus: #275EFE;
 
-$btn-border: #3a3a3a62;
+$control-bg: #fff;
+$border: #3a3a3a62;
 $btn-background: #FAFBFC;
 
 .form-group {
-  margin-bottom: 14px;
-}
-
-.form-label {
-  font-size: 16px;
+  display: flex;
 }
 
 .form-control {
@@ -26,13 +22,13 @@ $btn-background: #FAFBFC;
   border-radius: 6px;
   -webkit-appearance: none;
   color: $input-color;
-  border: 1px solid $input-border;
-  background: $input-background;
+  border: 1px solid $border;
+  background: $control-bg;
   transition: border .3s ease;
 
   &:focus {
     outline: none;
-    border-color: $input-border-focus;
+    border-color: $border;
   }
 
   &::placeholder {
@@ -40,15 +36,14 @@ $btn-background: #FAFBFC;
   }
 }
 
-.form-link {
-  display: block;
-  margin-bottom: 14px;
-}
-
 .form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 8px 18px;
-  background: $btn-background;
-  border: 1px solid $btn-border;
+  background: $control-bg;
+  border: 1px solid $border;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;

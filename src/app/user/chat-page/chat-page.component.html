@@ -1,1 +1,11 @@
-<p>chat-page works!</p>
+<div class="chat">
+  <app-chat-bar></app-chat-bar>
+  <div class="chat__place">
+    <ng-container *ngFor="let msgInstance of msgs">
+      <app-chat-message
+        [msg]="msgInstance"
+      ></app-chat-message>
+    </ng-container>
+  </div>
+  <app-chat-send (valueEvent)="onTakeMsg($event)"></app-chat-send>
+</div>

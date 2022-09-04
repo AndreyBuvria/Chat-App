@@ -1,1 +1,11 @@
-<p>chat-message works!</p>
+<div
+  class="msg">
+  <div class="msg__body">
+    <span class="msg__user">{{ msg.user }}</span>
+    <p class="msg__text">{{ msg.text }}</p>
+  </div>
+
+  <div class="msg__date">
+    {{ msg.date | date:'shortDate' }}
+  </div>
+</div>

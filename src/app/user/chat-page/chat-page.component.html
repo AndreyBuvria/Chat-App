@@ -1,6 +1,6 @@
 <div class="chat">
   <app-chat-bar></app-chat-bar>
-  <div class="chat__place">
+  <div class="chat__place" #chatPlace>
     <ng-container *ngFor="let msgInstance of msgs">
       <app-chat-message
         [msg]="msgInstance"

@@ -1,11 +1,11 @@
 <div
   class="msg">
   <div class="msg__body">
-    <span class="msg__user">{{ msg.user }}</span>
+    <span class="msg__user">{{ msg.name }}</span>
     <p class="msg__text">{{ msg.text }}</p>
   </div>
 
   <div class="msg__date">
-    {{ msg.date | date:'shortDate' }}
+    {{ msg.timestamp | date:'shortDate' }}
   </div>
 </div>

@@ -8,15 +8,16 @@ import { WebsocketService } from '../../shared/services/websocket.service';
 })
 export class SendComponent implements OnInit {
 
-  @Output() valueEvent = new EventEmitter()
+  @Output() public valueEvent = new EventEmitter()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onValue(value: string) {
+  public onTrigEvent(value: string, input: HTMLInputElement) {
     this.valueEvent.emit(value);
+    input.value = '';
   }
 
 }

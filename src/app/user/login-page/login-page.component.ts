@@ -37,7 +37,10 @@ export class LoginPageComponent implements OnInit {
 
     this.api.login(data).subscribe({
       next: token => {
-        this.cookies.set('token', token.token);
+        const date = new Date();
+        date.setHours(date.getHours() + 1)
+
+        this.cookies.set('token', token.token, date);
         this.router.navigate(['/chat']);
       },
       error: err => console.log(err),

@@ -1,0 +1,48 @@
+$border: #2d2d2d70;
+$control-bg: #fff;
+$border-btn: #3a3a3a62;
+$color: #444343;
+
+.room {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(60, 60, 60, 0.38);
+  background: rgba(240, 240, 240, 0.22);
+  margin-bottom: 12px;
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $color;
+    text-decoration: none;
+  }
+
+  &__text {
+    padding: 0;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+  background: transparent;
+  border: 1px solid $border-btn;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+
+  &:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+}

@@ -16,7 +16,7 @@ export class WebsocketService implements OnInit {
   ngOnInit(): void {
   }
 
-  public connectSocket(room_name: string): WebSocketSubject<any> {
+  public connectSocket(room_name: number): WebSocketSubject<any> {
     this.subject = webSocket(this.URL + room_name + '/');
     return this.subject;
   }

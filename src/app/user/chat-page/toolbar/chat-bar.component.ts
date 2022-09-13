@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  public user!: string | null
+
   constructor() { }
 
   ngOnInit(): void {
+    this.user = localStorage.getItem('user');
   }
 
 }

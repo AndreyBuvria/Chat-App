@@ -25,8 +25,8 @@ export class ApiService {
     return this.http.get<Message[]>(`${this.API_URL}messages/${room}`, {headers: headers});
   }
 
-  public login(data: Login): Observable<{token: string}> {
-    return this.http.post<{token: string}>(`${this.API_URL}login`, data);
+  public login(data: Login): Observable<{token: string, user: string}> {
+    return this.http.post<{token: string, user: string}>(`${this.API_URL}login`, data);
   }
 
   public getAllRooms(): Observable<Room[]> {

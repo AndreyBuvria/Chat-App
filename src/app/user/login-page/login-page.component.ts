@@ -41,6 +41,7 @@ export class LoginPageComponent implements OnInit {
         date.setHours(date.getHours() + 1)
 
         this.cookies.set('token', token.token, date);
+        localStorage.setItem('user', token.user);
         this.router.navigate(['/chat']);
       },
       error: err => console.log(err),

@@ -11,6 +11,7 @@ import { ToolbarComponent } from './chat-page/toolbar/chat-bar.component';
 import { SendComponent } from './chat-page/send/send.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { ChatListComponent } from './chat-list/chat-list.component';
+import { RoomComponent } from './chat-list/room/room-block.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ChatListComponent } from './chat-list/chat-list.component';
     MainLayoutComponent,
     SendComponent,
     ChatListComponent,
+    RoomComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,11 @@ import { ChatListComponent } from './chat-list/chat-list.component';
         path: '',
         component: MainLayoutComponent,
         children: [
+          {
+            path: '',
+            redirectTo: '/chat',
+            pathMatch: 'full',
+          },
           {
             path: 'chat',
             component: ChatListComponent,

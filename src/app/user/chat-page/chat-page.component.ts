@@ -15,7 +15,7 @@ export class ChatPageComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   public msgs!: Message[]
 
-  private room!: string
+  private room!: number
   private subscriber!: Subscription
 
   @ViewChild('chatPlace') place!: ElementRef
@@ -33,20 +33,18 @@ export class ChatPageComponent implements OnInit, OnDestroy, AfterViewChecked {
       },
       error: err => console.log(err),
     });
-    this.subscriber = this.api.getAllMessages(this.room).subscribe({
-      next: (msgSet: Message[]) => {
-        this.msgs = msgSet;
-        console.log(msgSet)
-      },
-      error: err => console.log(err),
-    });
     this.websocket.connectSocket(this.room).subscribe({
       next: (msg: any) => {
-        console.log(msg)
         this.msgs.push(msg)
       }, // Called whenever there is a message from the server.
       error: err => console.log(err), // Called if at any point WebSocket API signals some kind of error.
       complete: () => console.log('complete') // Called when connection is closed (for whatever reason).
+    });
+    this.subscriber = this.api.getAllMessages(this.room).subscribe({
+      next: (msgSet: Message[]) => {
+        this.msgs = msgSet;
+      },
+      error: err => console.log(err),
     });
   }
   ngAfterContentInit(): void {

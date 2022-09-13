@@ -1,0 +1,16 @@
+$bg: #e3e3e6;
+$border: #2b2b2b;
+
+.chat-list {
+  width: 440px;
+  background: $bg;
+  border: 1px solid $border;
+  padding: 14px 10px;
+  border-radius: 6px;
+
+  &__place {
+    overflow-y: auto;
+    height: 320px;
+    margin-top: 12px;
+  }
+}

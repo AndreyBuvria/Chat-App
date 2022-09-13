@@ -1,1 +1,9 @@
-<p>chat-list works!</p>
+<div class="chat-list">
+  <app-chat-bar></app-chat-bar>
+  <div class="chat-list__place">
+    <ng-container *ngFor="let room of rooms">
+      <app-room [room]="room"></app-room>
+    </ng-container>
+
+  </div>
+</div>

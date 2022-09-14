@@ -46,6 +46,8 @@ export class LoginPageComponent implements OnInit {
       },
       error: err => console.log(err),
     });
+
+    this.form.reset();
   }
 
 }

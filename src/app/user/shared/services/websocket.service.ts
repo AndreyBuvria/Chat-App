@@ -6,9 +6,8 @@ import { Message } from '../interfaces/message.interface';
   providedIn: 'root'
 })
 export class WebsocketService implements OnInit {
-
-  private subject!: WebSocketSubject<any>
-  private URL = 'ws://localhost:8000/ws/chat/'
+  private subject!: WebSocketSubject<any>;
+  private URL = 'ws://localhost:8000/ws/chat/';
 
   constructor() {
   }
@@ -16,8 +15,8 @@ export class WebsocketService implements OnInit {
   ngOnInit(): void {
   }
 
-  public connectSocket(room_name: number): WebSocketSubject<any> {
-    this.subject = webSocket(this.URL + room_name + '/');
+  public connectSocket(roomID: number): WebSocketSubject<any> {
+    this.subject = webSocket(this.URL + roomID + '/');
     return this.subject;
   }
 

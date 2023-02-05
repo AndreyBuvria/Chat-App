@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { ApiService } from '../shared/services/api.service';
+import { ApiService } from '../shared/apis/api.service';
 
 @Component({
   selector: 'app-login-page',
